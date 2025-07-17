@@ -59,7 +59,7 @@ HTML = '''
                 <input type="submit" value="Tính">
             </form>
             {% if age %}
-                <p>Bạn {{ age }} tuổi rùi</p>
+                <p>Bạn {{ age }} tuổi</p>
             {% endif %}
         </div>
     </div>
