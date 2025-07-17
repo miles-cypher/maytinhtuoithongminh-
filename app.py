@@ -68,11 +68,11 @@ HTML = '''
         <div class="container">
             <h1>Máy tính tuổi thông minh</h1>
             <form method="post">
-                <input type="number" name="age" placeholder="Nhập tuổi" required><br>
+                <input type="number" name="age" placeholder="Hãy nhập số tuổi" required><br>
                 <input type="submit" value="Tính">
             </form>
             {% if age %}
-                <p>Bạn {{ age }} tuổi</p>
+                <p>Bạn {{ age }} tuổi rùi </p>
             {% endif %}
         </div>
     </div>
