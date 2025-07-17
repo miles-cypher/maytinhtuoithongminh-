@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template_string
 
-app = Flask(__name__)  # ✅ PHẢI là tên app
+app = Flask(__name__)  
 
 HTML = '''
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ HTML = '''
       <input type="submit" value="Tính">
     </form>
     {% if age %}
-      <p>Bạn {{ age }} tuổi</p>
+      <p>Bạn {{ age }} tuổi rùi </p>
     {% endif %}
   </div>
 </body>
@@ -28,4 +28,3 @@ def index():
         age = request.form["age"]
     return render_template_string(HTML, age=age)
 
-# ❌ KHÔNG cần app.run() trên Render
