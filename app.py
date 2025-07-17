@@ -3,22 +3,39 @@ from flask import Flask, request, render_template_string
 app = Flask(__name__)
 
 HTML = '''
-<h2>Máy tính tuổi thông minh</h2>
-<form method="post">
-    Nhập tuổi: <input type="number" name="age" required>
-    <input type="submit" value="Gửi">
-</form>
-{% if age %}
-<p>Bạn {{ age }} tuổi</p>
-{% endif %}
-'''
-
-@app.route("/", methods=["GET", "POST"])
-def index():
-    age = None
-    if request.method == "POST":
-        age = request.form["age"]
-    return render_template_string(HTML, age=age)
-
-if __name__ == "__main__":
-    app.run()
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Máy tính tuổi thông minh</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #007bff;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        input[type=number] {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            margin-right: 10px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            bac
