@@ -5,7 +5,9 @@ app = Flask(__name__)
 HTML = '''
 <!DOCTYPE html>
 <html>
-<head><title>Máy tính tuổi</title></head>
+<head>
+      <title>Máy tính tuổi</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body style="display:flex;justify-content:center;align-items:center;height:100vh">
   <div>
     <h1>Máy tính tuổi thông minh</h1>
